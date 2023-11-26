@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<style>
+    header{
+        margin-bottom: 20px;
+    }
+
+    main{
+        margin-bottom: 20px;
+    }
+
+    #card{
+        margin-bottom: 40px;
+    }
+
+    #contact{
+        margin-bottom: 100px;
+    }
+
+    footer{
+        margin-top: 40px;
+    }
+</style>
+
+<style>
+ .navbar {
+    background-color: #333; /* Change background color of navbar */
+    padding-top: 10px; /* Adding top padding */
+    padding-bottom: 10px; /* Adding bottom padding */
+  }
+
+  .navbar-brand {
+    font-size: 2rem; /* Increase font size */
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fff; /* Change text color to white */
+    text-transform: uppercase; /* Transform text to uppercase */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.2rem;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+    color: #fff; /* Change link text color */
+    text-decoration: none;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #7fad39;
+    text-decoration: none; 
+    
+  }
+
+  .navbar-nav .nav-link:active {
+    text-decoration: none; /* Remove underline on active/clicked state */
+  }
+
+  .navbar-toggler {
+    border: none; /* Remove border */
+    padding: 5px 10px; /* Adjust padding */
+    background-color: #7fad39; /* Custom background color for toggler button */
+  }
+
+  .navbar-toggler-icon {
+    background-color: #fff; /* Change color of the toggler icon */
+    height: 2px; /* Customize height */
+    width: 20px; /* Customize width */
+  }
+
+  .navbar-toggler:hover {
+    background-color: #5f8a28;
+  }
+
+  @media (max-width: 768px) {
+    .navbar-nav .nav-link {
+      margin: 10px 0;
+    }
+  }
+
+  .about .content h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #173b6c;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.about .content ul strong {
+  margin-right: 10px;
+}
+
+.about .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #149ddd;
+  line-height: 0;
+}
+
+.about .content p:last-child {
+  padding-bottom: 0;
+}
+
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background: #f5f8fd;
+}
+
+.section-title {
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #173b6c;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #149ddd;
+  bottom: 0;
+  left: 0;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+header {
+  margin-bottom: 0;
+}
+
+</style>
+
+<style>
+#hero {
+  margin-top: 0; /* Atur margin-top menjadi 0 */
+}
+
+  #hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("background.png") top center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#hero:before {
+  content: "";
+  background: rgba(5, 13, 24, 0.3);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#hero .hero-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px; /* Atur lebar maksimum gambar */
+  margin: 0 auto; /* Pusatkan gambar */
+  padding: 0 15px; /* Atur ruang di kiri dan kanan gambar */
+}
+
+#hero h1 {
+  margin: 0;
+  font-size: 4vx;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+}
+
+#hero p {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+
+#hero p span {
+  color: #fff;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #149ddd;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 1.5;
+  }
+  
+  #hero p {
+    font-size: 16px; /* Sesuaikan ukuran font */
+    margin-bottom: 20px; /* Kurangi jarak antar paragraf */
+  }
+
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+  .hero-container img {
+  width: 100%; /* Buat gambar memenuhi lebar hero-container */
+  height: auto; /* Biarkan tinggi gambar disesuaikan secara otomatis */
+  max-width: 100%; /* Pastikan gambar tidak melebihi lebar container */
+  border-radius: 10px; 
+    }
+}
+</style>
+
+<style>
+  .section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #173b6c;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #149ddd;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#portfolio-title {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      position: relative;
+      color: #173b6c;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    #portfolio-title::after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background: #149ddd;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+</style>
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+      <div class="container">
+        <a class="navbar-brand" href="#">Fadhil Portofolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span
+            class="navbar-toggler-icon"></span></button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarNavDropDown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Portofolio</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarNavDropDown">
+                <li><a class="dropdown-item" href="#">Web Design</a></li>
+                <li><a class="dropdown-item" href="#">UI Design Web</a></li>
+                <li><a class="dropdown-item" href="#">Adobe Photoshop</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+      <div class="hero-container" data-aos="fade-in">
+        <h1>Fadhil Cahya Hilmi</h1>
+        <p>I'm Designer, Developer, Freelancer, Student College</p>
+      </div>
+    </section>
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About</h2>
+          <p>Mahasiswa Teknik Informatika Dari Universitas Pamulang Semester 5. Memiliki Ketertarikan Untuk Menjadi Android Developer, UI/UX Designer, Data Scientist Dan Mempelajari Banyak Bahasa Pemrograman. Memiliki Kemampuan Menggunakan Wordpress, Adobe After Effect dan Pernah Mengikuti Kuliah Digital Marketing.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="profile-img.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>UI/UX Designer &amp; Web Developer.</h3>
+            <p class="fst-italic">
+              "Passionate UI/UX Designer & Web Developer creating immersive digital experiences.
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>24 April 2002</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>https://mycvhilmicy.000webhostapp.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+62 82116580883</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Jakarta, Indonesia</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>21</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>E-mail:</strong> <span>fadhilcahya52@gmail.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                </ul>
+              </div>
+            </div>
+            <p>
+              Saya adalah Junior UI/UX Designer dan Web Developer dengan dedikasi yang tinggi dalam menciptakan pengalaman pengguna yang menarik dan fungsional. Keahlian saya mencakup desain visual yang estetis, pemahaman mendalam akan prinsip-prinsip antarmuka yang intuitif, serta kemampuan dalam mengembangkan situs web yang responsif dan dinamis. Saya siap menghadirkan solusi inovatif dan berkualitas tinggi untuk proyek-proyek mendatang, dengan fokus pada kepuasan pengguna dan keberhasilan bisnis.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <section id="card">
+      <div class="container">
+        <h2 id="portfolio-title">Portfolio</h2>
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col mb-5">
+                  <div class="card h-100">
+                      <img src="https://img.freepik.com/free-vector/hand-drawn-web-developers-working_23-2148819605.jpg?w=996&t=st=1700470819~exp=1700471419~hmac=36e94545dfde2a9343cfe6c170ac089de63fa0e726033d635ac0d1783ad01ac0" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <h5 class="card-title">Web Design </h5>
+                          <h5>(HTML, CSS, JavaScript)</h5>
+                          <p class="card-text">Desain web yang terstruktur dengan HTML, diperindah dengan CSS, dan diperkaya dengan fungsionalitas JavaScript.</p>
+                      </div>
+                      <div class="card-footer d-flex justify-content-between align-items-center">
+                          <small class="text-muted">Terakhir Diperbaharui 5 menit yang lalu</small>
+                          <button class="btn btn-sm btn-outline-secondary">Detail</button>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="col mb-5">
+                  <div class="card h-100">
+                      <img src="https://img.freepik.com/free-vector/cartoon-style-programmer-working_52683-22715.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <h5 class="card-title">UI Design Web</h5>
+                          <h5>(Figma)</h5>
+                          <p class="card-text">Desain UI yang dinamis dan visual, mencerminkan kreativitas serta kecanggihan teknologi.</p>
+                      </div>
+                      <div class="card-footer d-flex justify-content-between align-items-center">
+                          <small class="text-muted">Terakhir Diperbaharui 5 Menit Yang lalu</small>
+                          <button class="btn btn-sm btn-outline-secondary">Detail</button>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="col mb-5">
+                  <div class="card h-100">
+                      <img src="https://img.freepik.com/free-vector/female-programmer-doing-her-job-office_23-2148274929.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <h5 class="card-title">Adobe Photoshop</h5>
+                          <p class="card-text">Manipulasi gambar yang presisi dan efek visual yang menakjubkan dapat dengan mudah diwujudkan melalui Adobe Photoshop</p>
+                      </div>
+                      <div class="card-footer d-flex justify-content-between align-items-center">
+                          <small class="text-muted">Terakhir Diperbaharui 5 Menit Yang lalu</small>
+                          <button class="btn btn-sm btn-outline-secondary">Detail</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="mb-3 row text-center">
+                <h1>Contact us</h1>
+            </div>
+            <div class="row justify-content-center">
+                
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+
+            <div class="mb-3 form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Berlangganan Website Fadhil</label>
+            </div>
+            <div class="mb-3">
+               <button type="submit" class="btn btn-primary">Kirim</button>
+            </div>
+        </div>
+
+    </section>
+  </main>
+  <footer>
+    <!-- place footer here -->
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+
+    <!-- Footer -->
+    <footer
+            class="text-center text-lg-start text-white"
+            style="background-color: #1c2331"
+            >
+      <!-- Section: Social media -->
+      <section
+               class="d-flex justify-content-between p-4"
+               style="background-color: #6351ce"
+               >
+        <!-- Left -->
+        <div class="me-5">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+  
+        <!-- Right -->
+        <div>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+  
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold">Company name</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+              <p>
+                Here you can use rows and columns to organize your footer
+                content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit.
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">Products</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+              <p>
+                <a href="#!" class="text-white">MDBootstrap</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">MDWordPress</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">BrandFlow</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">Bootstrap Angular</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">Useful links</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+              <p>
+                <a href="#!" class="text-white">Your Account</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">Become an Affiliate</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">Shipping Rates</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">Help</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">Contact</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+              <p><i class="fas fa-home mr-3"></i> B, NY 10012, US</p>
+              <p><i class="fas fa-envelope mr-3"></i> fadhilcahya52@gmail.com</p>
+              <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+              <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+  
+      <!-- Copyright -->
+      <div
+           class="text-center p-3"
+           style="background-color: rgba(0, 0, 0, 0.2)"
+           >
+        © 2023 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/"
+           >MDBootstrap.com</a
+          >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  
+  </div>
+  <!-- End of .container -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
